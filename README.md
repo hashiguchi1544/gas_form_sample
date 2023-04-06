@@ -1,6 +1,7 @@
 # google formの自動返信機能
 
 google formで入力した内容を、そのフォームに入力したアドレスに自動で返信する機能です。
+
 (google formで送信された内容がspreadsheetに記録され、その最新のデータをメール送信する機能)
 
 
