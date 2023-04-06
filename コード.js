@@ -1,14 +1,11 @@
 function onFormSubmit(){
   const lessonSheet = SpreadsheetApp.getActiveSheet();
-  console.log(lessonSheet.getName());
 
   const lastRow = lessonSheet.getLastRow();
   const lastCol = lessonSheet.getLastColumn();
 
   const sRanage = lessonSheet.getRange(lastRow, 1, 1, lastCol);
   const values = sRanage.getValues()[0];
-  console.log(values);
-  console.log(values[4]);
 
   const time = values[0];
   const name = values[1];
@@ -57,12 +54,6 @@ time + "\n" +
 "Webサイト" + "\n" +
 "\n" +
 "--------------------------------" + "\n";
-  
-  // "【希望の職種】" + values[4] + "\n" +
-  // "お問い合わせありがとうございます。" + "\n" + "\n" +
-  // "メールを受けつけました。";
-
-  console.log(body);
 
   MailApp.sendEmail(email, mailSubject, body);
 }
